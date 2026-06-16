@@ -1,0 +1,60 @@
+flowchart TB
+  IN(["External data, users, voice"]) --> CC
+
+  subgraph CONTROL["Control plane"]
+    CC["Command Center<br/>orchestration, routing, lifecycle"]
+    DASH["Dashboard + voice & chat assistant"]
+    AHU["Analytics Hub<br/>strategic brain"]
+  end
+
+  subgraph EXECUTION["Execution plane"]
+    COM["Commerce"]
+    SALES["Sales"]
+    TRADE["Trading"]
+    CREA["Creative"]
+    BUILD["Builders"]
+  end
+
+  subgraph KNOWLEDGE["Knowledge plane - four-part memory"]
+    WIKI["Knowledge wiki<br/>raw to wiki to index"]
+    EPI["Episodic memory + decay"]
+    SS["Strategic state<br/>shared, versioned"]
+    RET["Retention<br/>TTL, archive, purge"]
+    RES["Research + librarian + embeddings"]
+    SKILL["Skill manager<br/>self-extension"]
+  end
+
+  subgraph COGNITIVE["Cognitive layer (stack)"]
+    PRED["Prediction<br/>forecasting + RL world model"]
+    GOV["Adaptive governance<br/>policy modes"]
+    EVAL["Self-evaluation loop<br/>validators, QA, learning, experiment, drift, reflection"]
+    PLAN["Planning + meta-research<br/>being added"]
+  end
+
+  subgraph RELIABILITY["Reliability plane"]
+    SENT["Autonomous SOC + SRE<br/>anomaly, incident, remediation"]
+    OBS["Metrics, logs, alerts"]
+  end
+
+  BUS{{"MQTT event bus"}}
+  GW{{"Local-model gateway"}}
+
+  DASH --- CC
+  AHU --- CC
+  CC --> EXECUTION
+  EXECUTION --> KNOWLEDGE
+  AHU --> PRED
+  PRED --> GOV
+  GOV --> SS
+  SS --> AHU
+  KNOWLEDGE --> COGNITIVE
+  EVAL --> CC
+  COGNITIVE --> SKILL
+  SKILL --> EXECUTION
+  AHU --> EXECUTION
+  EXECUTION -. events .-> OBS
+  SENT -. remediation .-> EXECUTION
+  BUS --- EXECUTION
+  BUS --- COGNITIVE
+  GW --- EXECUTION
+  GW --- COGNITIVE
