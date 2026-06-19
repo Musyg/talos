@@ -9,7 +9,6 @@ collection of scripts and more like an operating system for agents.
 ## At a glance
 
 - **4-node compute fleet**, specialized by role (control/business, two GPU nodes, support).
-- **~60,000 files**, ~16,000 Python modules.
 - **~55 agents** and **85+ services**, discovered through a single registry.
 - **44 local language models** served via a hot-swapping gateway, plus cloud models.
 - **MQTT event bus** (60+ event namespaces) wiring every component together.
@@ -35,13 +34,13 @@ demand forecasting, recommendation, customer-lifetime-value, fraud detection,
 sentiment, product enrichment, and visual search. Storefronts, catalogs, and
 campaigns run with little to no human input.
 
-**Autonomous sales.** A full pipeline - prospection, qualification, negotiation,
-closing - with a deal ledger, a compliance guard, and self-hosted eIDAS-grade
-e-signature. Validated end to end.
+**Autonomous sales.** A pipeline with prospection and qualification live, and
+negotiation and closing built - backed by a deal ledger and a compliance guard.
+Self-hosted e-signature and full end-to-end validation are in progress.
 
-**Trading.** A research-and-execution stack: strategy models, time-series
-forecasting, and a reinforcement-learning world model that simulates business and
-market decisions before they are taken.
+**Trading.** A research-and-execution stack running in paper/testnet mode: strategy
+models, time-series forecasting, and a reinforcement-learning world model that
+simulates business and market decisions before they are taken.
 
 **Creative & content.** Long-form and social content generation, SEO articles,
 community management, image and video generation, and scheduled multi-channel
