@@ -15,6 +15,8 @@ collection of scripts and more like an operating system for agents.
 - **Cumulative vector memory**: 640,000+ points across 12 collections.
 - Real-time voice stack, full observability, and self-healing.
 
+These figures are measured on the live fleet, not estimated - see [metrics/snapshot-2026-06-20.md](metrics/snapshot-2026-06-20.md) for the exact commands and their outputs.
+
 ## Dashboard
 
 The control surface: a real-time view of every node, agent, pipeline, and KPI,
@@ -25,6 +27,18 @@ with a built-in voice and chat assistant.
 ![Agent fleet](assets/agents.png)
 
 ![Memory and recursive validation](assets/memory-system.png)
+
+A few of the operational panels:
+
+![Memory storage: 1M+ events, facts, knowledge graph, and vectors](assets/memory-storage.png)
+
+![Learning engine: prompt optimization with A/B canary and evolutionary search](assets/learning-engine.png)
+
+![Prompt library: indexed, reusable prompts](assets/prompt-library.png)
+
+![Local model fleet: per-node models, pools, and VRAM-aware hot-swap](assets/llm-models.png)
+
+![Agent metrics: online agents, request rate, error rate, and per-agent throughput](assets/agent-metrics.png)
 
 ## What it does
 
