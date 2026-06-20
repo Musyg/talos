@@ -10,9 +10,9 @@ collection of scripts and more like an operating system for agents.
 
 - **4-node compute fleet**, specialized by role (control/business, two GPU nodes, support).
 - **~55 agents** and **85+ services**, discovered through a single registry.
-- **44 local language models** served via a hot-swapping gateway, plus cloud models.
+- **54 local language models** served via a hot-swapping gateway, plus cloud models.
 - **MQTT event bus** (60+ event namespaces) wiring every component together.
-- **Cumulative vector memory**: 690,000+ points across 12 collections.
+- **Cumulative vector memory**: 640,000+ points across 12 collections.
 - Real-time voice stack, full observability, and self-healing.
 
 ## Dashboard
