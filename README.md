@@ -1,10 +1,10 @@
-# Talos - A Distributed Agentic Operating System
+# talos
 
-Talos is the autonomous, fully-agentic platform I designed and built. It detects
-opportunities, produces assets, runs commerce, sales, trading, and creative work,
-talks to its operator by voice or chat, and improves its own capabilities over
-time - across a four-node fleet, mostly on local models. It behaves less like a
-collection of scripts and more like an operating system for agents.
+A multi-agent platform I built and run myself, across a four-node fleet, mostly
+on local models. It handles commerce, sales, trading research, and content
+work, and I talk to it by voice or chat.
+
+Where there is a number below, there is a script that reproduces it.
 
 ## At a glance
 
@@ -15,7 +15,7 @@ collection of scripts and more like an operating system for agents.
 - **Cumulative vector memory**: 640,000+ points across 12 collections.
 - Real-time voice stack, full observability, and self-healing.
 
-These figures are measured on the live fleet, not estimated - see [metrics/snapshot-2026-06-20.md](metrics/snapshot-2026-06-20.md) for the exact commands and their outputs.
+These figures are measured on the live fleet: see [metrics/snapshot-2026-06-20.md](metrics/snapshot-2026-06-20.md) for the exact commands and their outputs.
 
 ## Dashboard
 
@@ -49,7 +49,7 @@ sentiment, product enrichment, and visual search. Storefronts, catalogs, and
 campaigns run with little to no human input.
 
 **Autonomous sales.** A pipeline with prospection and qualification live, and
-negotiation and closing built - backed by a deal ledger and a compliance guard.
+negotiation and closing built, backed by a deal ledger and a compliance guard.
 Self-hosted e-signature and full end-to-end validation are in progress.
 
 **Trading.** A research-and-execution stack running in paper/testnet mode: strategy
@@ -71,20 +71,16 @@ refactor code and infrastructure under execution verifiers.
 
 ## How it thinks
 
-A cognitive layer keeps the system improving rather than merely running, built as a
-stack. An analytics hub is the strategic brain coupled to the Command Center: it
-consolidates KPIs, finance, and ML predictions, supervises the fleet, and acts on
-agents directly. Its predictive level goes beyond Monte Carlo, with two live stages:
-time-series forecasting (Chronos-class) and a reinforcement-learning world model
-(DreamerV3-class) that imagines the consequences of a decision before it is taken,
-trained on the platform's own real outcomes; a causal-reasoning stage is in progress.
-Above it, adaptive governance switches strategic mode from live metrics, a shared
-strategic-state graph is the common ground, and a reality-alignment check recalibrates
-it against actual impact. Around it, a closed self-evaluation loop: recursive
-validators, multi-layer QA with self-healing tests, a reflection mechanism that learns
-from past mistakes, a learning engine (A/B canary and evolutionary search), and
-experiment and drift monitors. A skill manager turns gaps into new reusable
-capabilities. Long-horizon planning and a meta-research engine are being added.
+A layer above the agents tracks how the system is doing and adjusts it. An
+analytics hub, coupled to the Command Center, consolidates KPIs, finance, and
+ML predictions and can act on agents directly. Two prediction stages run live:
+a Chronos-class time-series forecaster and a DreamerV3-class world model that
+simulates the outcome of a decision before it is taken, trained on the
+platform's own history. A causal-reasoning stage is in progress. Underneath
+that, a self-evaluation loop: validators, QA with self-healing tests, a
+learning engine using A/B canaries and evolutionary search, and drift
+monitoring. A skill manager turns recurring gaps into new reusable
+capabilities. Long-horizon planning and a research engine are being added.
 
 ## Memory
 
@@ -138,7 +134,7 @@ pytest, and pre-commit.
 
 - Execution-verified generation over single-shot prompting.
 - Constrained decoding for valid output; ensemble judges to catch semantic false positives.
-- Defense-in-depth - multiple independent checks, never one prompt.
+- Defense-in-depth: multiple independent checks, never one prompt.
 - Metrics-driven: every change is measured; if it isn't reproducible, it isn't done.
 
 ## Open-source components
